@@ -31,5 +31,8 @@
 
 - add .env file
 
-SERVERNAME=<!-- YOUR_SERVER_NAME -->
-CERT_Password=<!-- YOUR_CERTIFICATE_PASSWORD-->
+  ```shell
+  SERVERNAME=<!-- YOUR_SERVER_NAME -->
+  CERT_Password=<!-- YOUR_CERTIFICATE_PASSWORD-->
+  ```
+  
