@@ -28,3 +28,8 @@
 - 關閉虛擬環境與刪除
 
   開啟終端機，然後執行 deativate 即可，完成後再將虛擬環境目錄刪除即可清除虛擬環境。
+
+- add .env file
+
+SERVERNAME=<!-- YOUR_SERVER_NAME -->
+CERT_Password=<!-- YOUR_CERTIFICATE_PASSWORD-->
