@@ -1,0 +1,11 @@
+{
+    "charttype": "line",
+    "title": "分公司交易量",
+    "volumes": [
+        { "Branch": "6160", "tradevolume": 13000, "tradeusers": 30 },
+        { "Branch": "6161", "tradevolume": 18230, "tradeusers": 200 },
+        { "Branch": "6162", "tradevolume": 23500, "tradeusers": 130 },
+        { "Branch": "6163", "tradevolume": 19900, "tradeusers": 80 },
+        { "Branch": "6164", "tradevolume": 8000, "tradeusers": 99 }
+    ]
+}
