@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Fetch Demo</title>
+</head>
+<body>
+    <form id="form" method="get">
+        <input type="text" name="username" id="username" value="steven" placeholder="input username">
+        <input type="password" name="password" id="password" value="1111" placeholder="input password">
+        <input type="email" name="email" id="email" value="aaa@bbb.ccc" placeholder="input email">
+        <input type="date" name="today" value="2023-05-05" id="today">
+        <input type="submit" value="Send">
+    </form>
+    <pre id="Result"></pre>
+    <script>
+        const form = document.getElementById("form");
+
+        async function fetchdata(url, postData) {
+            fetch( url, {
+                method: "post",
+                headers: {
+                    "accept": "application/json",
+                    "content-type": "application/json"
+                },
+                body: JSON.stringify(postData)
+            }).then( (response) => response.json())
+            .then( (json) => {
+                //成功結果處理
+                var result = document.getElementById("Result");
+                result.textContent = JSON.stringify(json, undefined, 4);
+                console.log(json);
+                // console.log(json.result);
+                // console.log(json.data.username);
+                // console.log(json.data.password);
+                // console.log(json.data.email);
+                // console.log(json.data.today);
+            })
+            .catch((error) => {
+                //錯誤結果處理
+                console.log(error)
+            })
+
+        }
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            // 取得表單資料並轉成 JSON
+            const payload = new FormData(form);
+            var postData = {};
+            payload.forEach((value, key) => postData[key] = value);
+            // 取得 API 資料
+            fetchdata("/data", postData);
+        });
+    </script>
+</body>
+</html>
