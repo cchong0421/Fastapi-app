@@ -9,20 +9,11 @@ from typing import Optional
 from pydantic import BaseModel, Field
 from fastapi.responses import JSONResponse, HTMLResponse
 from fastapi import FastAPI, Request, Header, HTTPException, status
-<< << << < HEAD
-== == == =
->>>>>> > ca2a61b6e9adf6d8ee01f4582c4176a5bb0c1909
 
 app = FastAPI()
-<< << << < HEAD
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory="templates")
-
-== == == =
-app.mount("/static", StaticFiles(directory="static"), name="static")
-templates = Jinja2Templates(directory="templates")
->>>>>> > ca2a61b6e9adf6d8ee01f4582c4176a5bb0c1909
 
 
 class ErrorModel(BaseModel):
