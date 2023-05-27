@@ -1,3 +1,4 @@
 fastapi-env
 .DS_Store
 .env
+demo.db
