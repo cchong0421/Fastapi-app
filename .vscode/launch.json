@@ -17,7 +17,7 @@
       "type": "python",
       "request": "launch",
       "module": "uvicorn",
-      "args": ["main:app", "--reload", "--no-server-header"],
+      "args": ["maincrud:app", "--reload", "--no-server-header"],
       "jinja": true,
       "justMyCode": true
     }

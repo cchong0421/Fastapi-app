@@ -9,3 +9,4 @@ pyOpenSSL>=23.1.0
 pycryptodome>=3.17
 pymongo==4.3.3
 Jinja2==3.1.2
+SQLAlchemy==2.0.15
