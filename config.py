@@ -11,5 +11,7 @@ MongoDBPasswrod = os.getenv('MONGODBPWD')
 
 MongoDBConnectionString = f"mongodb+srv://{ MongoDBUser }:{ MongoDBPasswrod }@testmongodb-0.rl09ypp.mongodb.net/?retryWrites=true&w=majority"
 
+CertPassword = os.getenv('CERT_Password')
+
 ServerNameHash = hashlib.sha256(ServerName.encode('utf-8')).hexdigest()
 print(ServerNameHash)
