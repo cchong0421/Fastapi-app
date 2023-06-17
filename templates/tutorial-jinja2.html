@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block PAGE_TITLE %}Jinja2 master page sample {% endblock %}
+
+{% block PAGE_CONTENT %}
+<h1>Tutorial jinja2</h1>
+使用 Google Font (思源黑體字型)
+以思源黑體為例，只要在這個網站上按Ctrl+F 搜尋「Noto Sans TC」，<b>就可以取得這個字體的CSS 設定檔連結和字型名稱了。</b>
+透過同樣的方法，把連結匯入網站中，<span>選擇使用的字型，你就可以使用Google</span> 所提供的中文字體了！
+
+<div class="d-flex flex-column p-2 bd-highlight">
+    I'm a flexbox container!
+    <div class="card w-50 my-3">
+        <div class="card-header">
+            Header <i class="fa fa-circle-xmark fs-3 position-absolute top-0 start-100 translate-middle"></i>
+        </div>
+        <div class="card-body">
+            <h4 class="card-title">Title</h4>
+            <p class="card-text">Text</p>
+        </div>
+        <div class="card-footer text-muted">
+            Footer
+        </div>
+    </div>
+    
+    <div class="card w-50">
+        <div class="card-header">
+            Header
+        </div>
+        <div class="card-body">
+            <h4 class="card-title">Title</h4>
+            <p class="card-text">Text</p>
+        </div>
+        <div class="card-footer text-muted">
+            Footer
+        </div>
+    </div>
+    
+</div>
+
+{% endblock %}
+
+
+
+{% block USER_SCRIPT_SECTION %}
+    <script>
+        console.log("include me");
+    </script>
+{% endblock %}

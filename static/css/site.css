@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;500&display=swap');
+* { font-family: 'Noto Sans TC', sans-serif; font-size: 14pt; font-weight: 100; }
+
+body {
+    padding:0;
+    border: none;
+    margin:0;
+}
+span {font-weight: 300;}
+b { font-weight: 500;}
+
+.fa-circle-xmark:hover { color: red; }

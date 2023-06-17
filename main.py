@@ -59,3 +59,7 @@ async def post_data(request: Request, test: Test):
 @app.get("/formfetch", response_class=HTMLResponse)
 async def read_formfetch(request: Request):
     return templates.TemplateResponse("formfetch.html", {"request": request})
+
+@app.get("/jinja2/index", tags=["tutorial"])
+async def webpage_index(request: Request):
+    return templates.TemplateResponse("tutorial-jinja2.html", { "request": request})
