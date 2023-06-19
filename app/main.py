@@ -1,5 +1,5 @@
 import json
-import config
+import app.config as config
 from fastapi.responses import JSONResponse
 from fastapi import FastAPI, Header, HTTPException, status, Request
 import uvicorn
@@ -12,8 +12,8 @@ from fastapi import FastAPI, Request, Header, HTTPException, status
 
 app = FastAPI()
 
-app.mount("/static", StaticFiles(directory="static"), name="static")
-templates = Jinja2Templates(directory="templates")
+app.mount("/static", StaticFiles(directory="./app/static"), name="static")
+templates = Jinja2Templates(directory="./app/templates")
 
 
 class ErrorModel(BaseModel):

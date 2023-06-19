@@ -1,0 +1,11 @@
+version: '3.9'
+
+services:
+  ctbcapi:
+    build: .
+    container_name: fastapi-container
+    environment:
+      PORT: 443
+    ports:
+      - '443:8000'
+    restart: "no"
